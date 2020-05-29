@@ -1,0 +1,17 @@
+<div>
+    <div (click)="changeActiveItem(1)" class="outter"
+        [ngClass]="{'outter-selected': activeItem == 1, 'outter-unselected': activeItem != 1}">
+        <div class="inner" [ngClass]="{'inner-selected': activeItem == 1, 'inner-unselected': activeItem != 1}"></div>
+    </div>
+    <div  (click)="changeActiveItem(2)" class="outter"
+        [ngClass]="{'outter-selected': activeItem == 2, 'outter-unselected': activeItem != 2}">
+        <div class="inner" [ngClass]="{'inner-selected': activeItem == 2, 'inner-unselected': activeItem != 2}"></div>
+    </div>
+    <div class="outter outter-unselected">
+        <div class="inner inner-unselected"></div>
+
+    </div>
+    <div class="outter outter-unselected">
+        <div class="inner inner-unselected"></div>
+    </div>
+</div>

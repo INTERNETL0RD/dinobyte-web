@@ -1,6 +1,7 @@
 <div class="bg-image"></div>
-<div class="parent">
-  <router-outlet></router-outlet>
-  <app-home></app-home>
+<div (scroll)="test()" class="parent">
+  <router-outlet ></router-outlet>
+  <app-scroller ngModel="activeItem" [activeItem]="activeItem"></app-scroller>
+  <app-home ></app-home>
   <app-about></app-about>
-</div>
+</div> 
