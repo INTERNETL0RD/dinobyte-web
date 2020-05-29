@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HomeModule } from './home/home.module';
-import { AboutTechnologyModule } from './about/about-technology.module';
+import { AboutTechnologyModule } from './about/about-technology/about-technology.module';
 
 @NgModule({
   declarations: [
