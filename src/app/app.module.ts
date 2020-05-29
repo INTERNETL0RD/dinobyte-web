@@ -7,11 +7,12 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { AboutTechnologyModule } from './about/about-technology/about-technology.module';
 import { AboutDesignModule } from './about/about-design/about-design.module';
-
+import { ScrollerComponent } from './scroller/scroller.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ScrollerComponent,
   ],
   imports: [
     BrowserModule,
