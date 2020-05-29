@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 
 import { HomeModule } from './home/home.module';
 import { AboutTechnologyModule } from './about/about-technology/about-technology.module';
+import { AboutDesignModule } from './about/about-design/about-design.module';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { AboutTechnologyModule } from './about/about-technology/about-technology
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    AboutTechnologyModule
+    AboutTechnologyModule,
+    AboutDesignModule
   ],
   providers: [],
   bootstrap: [AppComponent]
