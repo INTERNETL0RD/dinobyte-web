@@ -8,6 +8,7 @@ import { HomeModule } from './home/home.module';
 import { AboutTechnologyModule } from './about/about-technology/about-technology.module';
 import { AboutDesignModule } from './about/about-design/about-design.module';
 import { ScrollerComponent } from './scroller/scroller.component';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ScrollerComponent } from './scroller/scroller.component';
     AppRoutingModule,
     HomeModule,
     AboutTechnologyModule,
-    AboutDesignModule
+    AboutDesignModule,
+    NgxPageScrollCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

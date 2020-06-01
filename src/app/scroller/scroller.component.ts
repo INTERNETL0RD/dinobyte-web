@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-scroller',
@@ -9,20 +8,31 @@ import { Component, OnInit, Input } from '@angular/core';
 
 
 export class ScrollerComponent implements OnInit {
-  @Input() activeItem: number;
-  constructor() {
+  public selected = false;
 
+  public scroll = 0;
 
+  public sectionSize = 1;
+
+  constructor(private readonly renderer: Renderer2) {
   }
+
   ngOnInit() {
-
+    this.renderer.listen('body', 'scroll', ($event) => {
+      this.sectionSize = document.body.scrollHeight / 3;
+      this.scroll = $event.path[0].scrollTop;
+    });
   }
 
+  scrollToTop() {
+    document.body.scroll({top: 0, left: 200, behavior: 'smooth'});
+  }
 
+  scrollToTechnology() {
+    document.querySelector('.technology').scrollIntoView({behavior: 'smooth'});
+  }
 
-  changeActiveItem(num: number) {
-    this.activeItem = num;
-    let element = document.querySelector("#about");
-    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  scrollToDesign() {
+    document.body.scroll({top: document.body.scrollHeight, left: 200, behavior: 'smooth'});
   }
 }

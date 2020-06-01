@@ -1,17 +1,24 @@
-<div>
-    <div (click)="changeActiveItem(1)" class="outter"
-        [ngClass]="{'outter-selected': activeItem == 1, 'outter-unselected': activeItem != 1}">
-        <div class="inner" [ngClass]="{'inner-selected': activeItem == 1, 'inner-unselected': activeItem != 1}"></div>
-    </div>
-    <div  (click)="changeActiveItem(2)" class="outter"
-        [ngClass]="{'outter-selected': activeItem == 2, 'outter-unselected': activeItem != 2}">
-        <div class="inner" [ngClass]="{'inner-selected': activeItem == 2, 'inner-unselected': activeItem != 2}"></div>
-    </div>
-    <div class="outter outter-unselected">
-        <div class="inner inner-unselected"></div>
-
-    </div>
-    <div class="outter outter-unselected">
-        <div class="inner inner-unselected"></div>
-    </div>
-</div>
+<ul>
+    <li (click)="scrollToTop()" class="outter" [class.outter-selected]="scroll >= 0 && scroll < sectionSize"
+        [class.outter-unselected]="scroll > sectionSize || scroll < 0">
+        <div class="inner" [class.inner-selected]="scroll >= 0 && scroll < sectionSize"
+            [class.inner-unselected]="scroll > sectionSize || scroll < 0"></div>
+    </li>
+    <li (click)="scrollToTechnology()" class="outter"
+        [class.outter-selected]="scroll >= sectionSize && scroll < sectionSize * 2"
+        [class.outter-unselected]="scroll > sectionSize * 2 || scroll < sectionSize">
+        <div class="inner" [class.inner-selected]="scroll >= sectionSize && scroll < sectionSize * 2"
+            [class.inner-unselected]="scroll > sectionSize * 2 || scroll < sectionSize"></div>
+    </li>
+    <li (click)="scrollToDesign()" class="outter"
+        [class.outter-selected]="scroll >= sectionSize * 2 && scroll < sectionSize * 3"
+        [class.outter-unselected]="scroll > sectionSize * 3 || scroll < sectionSize * 2">
+        <div class="inner" [class.inner-selected]="scroll >= sectionSize * 2 && scroll < sectionSize * 3"
+            [class.inner-unselected]="scroll > sectionSize * 3 || scroll < sectionSize * 2"></div>
+    </li>
+    <!-- <li class="outter" [class.outter-selected]="scroll >= sectionSize * 3"
+        [class.outter-unselected]="scroll < sectionSize * 3">
+        <div class="inner" [class.inner-selected]="scroll >= sectionSize * 3"
+            [class.inner-unselected]="scroll < sectionSize * 3"></div>
+    </li> -->
+</ul>
