@@ -25,14 +25,14 @@ export class ScrollerComponent implements OnInit {
   }
 
   scrollToTop() {
-    document.body.scroll({top: 0, left: 200, behavior: 'smooth'});
+    document.body.scroll({top: 0});
   }
 
   scrollToTechnology() {
-    document.querySelector('.technology').scrollIntoView({behavior: 'smooth'});
+    document.querySelector('.technology').scrollTo();
   }
 
   scrollToDesign() {
-    document.body.scroll({top: document.body.scrollHeight, left: 200, behavior: 'smooth'});
+    document.body.scroll({top: document.body.scrollHeight});
   }
 }

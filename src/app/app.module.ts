@@ -8,7 +8,8 @@ import { HomeModule } from './home/home.module';
 import { AboutTechnologyModule } from './about/about-technology/about-technology.module';
 import { AboutDesignModule } from './about/about-design/about-design.module';
 import { ScrollerComponent } from './scroller/scroller.component';
-import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Globals } from './globals';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,9 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
     HomeModule,
     AboutTechnologyModule,
     AboutDesignModule,
-    NgxPageScrollCoreModule
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

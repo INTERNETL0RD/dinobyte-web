@@ -1,8 +1,8 @@
 <div class="bg-image"></div>
-<div>
+<div (scroll)="onScroll($event)">
   <router-outlet></router-outlet>
-  <app-scroller></app-scroller>
-  <app-home ></app-home>
-  <app-about></app-about>
-  <app-about-design></app-about-design>
+  <app-scroller class="child-component"></app-scroller>
+  <app-home class="child-component"></app-home>
+  <app-about class="child-component"></app-about>
+  <app-about-design class="child-component"></app-about-design>
 </div> 

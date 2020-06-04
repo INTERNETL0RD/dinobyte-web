@@ -1,8 +1,10 @@
-<app-navbar></app-navbar>
-<div class="intro">
-    <div class="brand">
-        <hr/>
-        <span>DinoByte S.C. Software Development & Graphic design</span>
+<div class="container" [@fade]="globals.visibleComponents[0]">
+    <app-navbar></app-navbar>
+    <div class="intro" id="home">
+        <div class="brand" [@move]="globals.visibleComponents[0]">
+            <hr/>
+            <span>DinoByte S.C. Software Development & Graphic design</span>
+        </div>
+        <h1 [@move]="globals.visibleComponents[0]"><span style="color: #71B64B;">A simple way</span> to digitalize yourself, are you ready? </h1>
     </div>
-    <h1><span style="color: #71B64B;">A simple way</span> to digitalize yourself, are you ready? </h1>
 </div>

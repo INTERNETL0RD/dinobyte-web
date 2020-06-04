@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap')
 
+html
+    scroll-snap-type: both mandatory
+
 html, body
     height: 100%
     margin: 0
-    overflow: scroll
+    overflow-y: scroll
+    overflow-x: hidden
     background-color: black
-    scroll-behavior: smooth
 
 body::-webkit-scrollbar
     display: none
 
-
+.child-component
+    scroll-snap-align: center
+    scroll-snap-stop: always
 
 @font-face 
     font-family: 'cocogoose_classic_trialXBd'
