@@ -1,0 +1,123 @@
+.container
+    position: fixed
+    width: 100vw
+    height: 100vh
+    color: white
+
+.carousel
+    display: flex
+    flex-wrap: nowrap
+    height: 54.54vh
+    width: 100%
+    overflow-x: auto
+    border-radius: 0.5em
+    font-family: 'Comfortaa', cursive
+
+.slide
+    object-fit: cover
+    flex: 0 0 auto
+    height: 100%
+    width: 50%
+    // zoom effect on hover
+    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84)
+    border-radius: 0.5em
+
+.image
+    position: relative
+    float: left
+    border-radius: 100%
+    height: 100px
+    width: 100px
+
+#javi
+    background-image: url('/assets/images/Javi.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+#jared
+    background-image: url('/assets/images/Gerard.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+#plastidecors
+    background-image: url('/assets/images/isma.png')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+#skere
+    background-image: url('/assets/images/Teva.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+span
+    color: rgba(51, 170, 51)
+
+h2
+    opacity: 0.5
+    font-size: 2.59vh
+    margin: 0 0 3vh 0
+
+h3
+    font-family: 'cocogoose_classic_trialmedium'
+    font-size: 4.72vh
+    margin: 0
+
+h4
+    margin: 0
+// .slide:hover
+//     transform: scale(1.025)
+
+
+// // =========================
+// // Next and Prev buttons
+// // =========================
+// .control
+//     border: none
+//     background-color: transparent
+//     outline: 0 // remove blue outline border, but make sure they are still focussable for accessibility
+//     position: absolute
+//     cursor: pointer
+//     display: flex
+//     flex-direction: column
+//     justify-content: center
+//     padding: 0.5em
+//     color: white
+//     font-weight: bold
+//     font-size: 3em
+//     user-select: none
+//     height: 100%
+//     opacity: 80%
+//     // opacity effect on hover
+//     transition: opacity 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84)
+
+// // &:hover, &:focus
+// //     opacity: 1
+  
+// // /*Position the buttons*/
+
+// // &.next
+// //     right: 0
+  
+// // &.prev
+// //     left: 0
+  
+
+
+// /* style the arrows */
+// .arrow
+//     display: block
+//     border-left: 0.1em solid white
+//     border-bottom: 0.1em solid white
+//     width: 0.5em
+//     height: 0.5em
+
+// // &.left
+// //     transform: rotate(45deg)
+  
+// // &.right
+// //     transform: rotate(225deg)
+  

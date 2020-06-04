@@ -9,10 +9,14 @@ import { Globals } from './globals';
 export class AppComponent implements OnInit {
   private isExecuting = false;
   private counter = 0;
+
   constructor(private readonly globals: Globals) { }
+
   ngOnInit() {
   }
+
   title = 'dinobyte';
+  
   @HostListener('mousewheel', ['$event']) // for window scroll events
   onScroll(event) {
     if (!this.isExecuting) {

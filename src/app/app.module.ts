@@ -10,6 +10,7 @@ import { AboutDesignModule } from './about/about-design/about-design.module';
 import { ScrollerComponent } from './scroller/scroller.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Globals } from './globals';
+import { TeamModule } from './team/team.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { Globals } from './globals';
     AboutTechnologyModule,
     AboutDesignModule,
     BrowserAnimationsModule,
+    TeamModule
   ],
   providers: [Globals],
   bootstrap: [AppComponent]
