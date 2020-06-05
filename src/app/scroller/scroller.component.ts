@@ -1,38 +1,53 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Style } from '../entities/styles.entity';
 
 @Component({
   selector: 'app-scroller',
   templateUrl: './scroller.component.html',
-  styleUrls: ['./scroller.component.sass']
+  styleUrls: ['./scroller.component.sass'],
 })
 
 
 export class ScrollerComponent implements OnInit {
-  public selected = false;
 
-  public scroll = 0;
+  @Input() isColumn: boolean;
+  @Input() flags: boolean[];
+  public style: Style;
 
-  public sectionSize = 1;
-
-  constructor(private readonly renderer: Renderer2) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.renderer.listen('body', 'scroll', ($event) => {
-      this.sectionSize = document.body.scrollHeight / 3;
-      this.scroll = $event.path[0].scrollTop;
-    });
+    if (this.isColumn) {
+      this.style = {
+        display: 'flex',
+        flex_direction: 'column',
+        position: 'fixed',
+        right: '5%',
+        top: '45%',
+        z_index: 10000
+      } as Style;
+    }
+    else {
+      this.style = {
+        display: 'flex',
+        flex_direction: 'row',
+        justify_content: 'center',
+        right: '0',
+        top: '0',
+        z_index: 10000,
+        position: 'inherit',
+      } as Style;
+    }
   }
 
-  scrollToTop() {
-    document.body.scroll({top: 0});
-  }
-
-  scrollToTechnology() {
-    document.querySelector('.technology').scrollTo();
-  }
-
-  scrollToDesign() {
-    document.body.scroll({top: document.body.scrollHeight});
+  changeState(flagIndex: number) {
+    for (let index = 0; index < this.flags.length; index++) {
+      if (index === flagIndex) {
+        this.flags[flagIndex] = !this.flags[flagIndex];
+      } else {
+        this.flags[index] = false;
+      }
+    }
   }
 }

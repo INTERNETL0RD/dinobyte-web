@@ -7,15 +7,16 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { AboutTechnologyModule } from './about/about-technology/about-technology.module';
 import { AboutDesignModule } from './about/about-design/about-design.module';
-import { ScrollerComponent } from './scroller/scroller.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Globals } from './globals';
 import { TeamModule } from './team/team.module';
+import { ScrollerModule } from './scroller/scroller.module';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScrollerComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,8 @@ import { TeamModule } from './team/team.module';
     AboutTechnologyModule,
     AboutDesignModule,
     BrowserAnimationsModule,
-    TeamModule
+    TeamModule,
+    ScrollerModule
   ],
   providers: [Globals],
   bootstrap: [AppComponent]

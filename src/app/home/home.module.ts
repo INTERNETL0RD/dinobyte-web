@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home.component';
 
 
 
 @NgModule({
-  declarations: [NavbarComponent, HomeComponent],
+  declarations: [HomeComponent],
   imports: [
     CommonModule
   ],

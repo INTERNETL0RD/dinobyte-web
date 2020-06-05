@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TeamComponent } from './team.component';
+import { ScrollerModule } from '../scroller/scroller.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    ScrollerModule
   ],
   declarations: [TeamComponent],
   exports: [TeamComponent]

@@ -16,17 +16,17 @@ export class AppComponent implements OnInit {
   }
 
   title = 'dinobyte';
-  
+
   @HostListener('mousewheel', ['$event']) // for window scroll events
   onScroll(event) {
     if (!this.isExecuting) {
       this.isExecuting = true;
-      if (event.deltaY > 0 && this.counter <= 1 && this.counter >= 0) {
-        //we do this to hide other components and trigger the hide animation
+      if (event.deltaY > 0 && this.counter <= 2 && this.counter >= 0) {
+        //we do this to hide the component and trigger the hide animation
         this.globals.visibleComponents[this.counter] = false;
         this.counter++;
         this.globals.visibleComponents[this.counter] = true;
-      } else if (event.deltaY < 0 && this.counter > 0 && this.counter <= 2) {
+      } else if (event.deltaY < 0 && this.counter > 0 && this.counter <= 3) {
         this.globals.visibleComponents[this.counter] = false;
         this.counter--;
         this.globals.visibleComponents[this.counter] = true;

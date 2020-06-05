@@ -1,26 +1,29 @@
 .container
     position: fixed
-    width: 100vw
-    height: 100vh
+    width: 88.30vw
+    height: 80vh
     color: white
 
 .carousel
-    display: flex
-    flex-wrap: nowrap
-    height: 54.54vh
-    width: 100%
-    overflow-x: auto
-    border-radius: 0.5em
+    height: 48.05vh
+    width: 88.30vw
+    overflow: hidden
+    margin-top: 12.59vh
     font-family: 'Comfortaa', cursive
 
-.slide
-    object-fit: cover
-    flex: 0 0 auto
+.carousel-view
+    position: fixed
+    width: 100%
     height: 100%
-    width: 50%
-    // zoom effect on hover
-    transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84)
-    border-radius: 0.5em
+    margin-left: 4.58vw
+
+.slide
+    position: relative
+    float: left
+    height: 100%
+    width: 37.14vw
+    height: 100%
+    margin-right: 6vw
 
 .image
     position: relative
@@ -68,56 +71,3 @@ h3
 
 h4
     margin: 0
-// .slide:hover
-//     transform: scale(1.025)
-
-
-// // =========================
-// // Next and Prev buttons
-// // =========================
-// .control
-//     border: none
-//     background-color: transparent
-//     outline: 0 // remove blue outline border, but make sure they are still focussable for accessibility
-//     position: absolute
-//     cursor: pointer
-//     display: flex
-//     flex-direction: column
-//     justify-content: center
-//     padding: 0.5em
-//     color: white
-//     font-weight: bold
-//     font-size: 3em
-//     user-select: none
-//     height: 100%
-//     opacity: 80%
-//     // opacity effect on hover
-//     transition: opacity 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84)
-
-// // &:hover, &:focus
-// //     opacity: 1
-  
-// // /*Position the buttons*/
-
-// // &.next
-// //     right: 0
-  
-// // &.prev
-// //     left: 0
-  
-
-
-// /* style the arrows */
-// .arrow
-//     display: block
-//     border-left: 0.1em solid white
-//     border-bottom: 0.1em solid white
-//     width: 0.5em
-//     height: 0.5em
-
-// // &.left
-// //     transform: rotate(45deg)
-  
-// // &.right
-// //     transform: rotate(225deg)
-  
