@@ -43,10 +43,8 @@ export class ScrollerComponent implements OnInit {
 
   changeState(flagIndex: number) {
     for (let index = 0; index < this.flags.length; index++) {
-      if (index === flagIndex) {
-        if (!this.flags[flagIndex]) {
-          this.flags[flagIndex] = !this.flags[flagIndex];
-        }
+      if (index === flagIndex && !this.flags[flagIndex]) {
+        this.flags[flagIndex] = !this.flags[flagIndex];
       } else {
         this.flags[index] = false;
       }
