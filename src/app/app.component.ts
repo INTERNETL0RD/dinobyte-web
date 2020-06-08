@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   private isExecuting = false;
   private counter = 0;
 
-  constructor(private readonly globals: Globals) { }
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
   }

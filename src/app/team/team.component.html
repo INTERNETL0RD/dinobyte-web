@@ -1,4 +1,15 @@
 <div class="container" id="team" [@fade]="globals.visibleComponents[3]">
+  <div class="header">
+    <img class="logo" src="assets/images/monograma-blanco.svg" alt="Kiwi standing on oval">
+    <h1>Equipo Dinobyte</h1>
+    <a href="/"><h1>Home</h1></a>
+    <a href="#team" (click)="goToSection(1)"><h1>¿Qué somos?</h1></a>
+    <button><em class="fas fa-bars"></em></button>
+  </div>
+  <div class="subheader">
+    <hr>
+    <span class="brand">DinoByte S.C. Software development & Graphic Design</span>
+  </div>
   <div class="carousel">
     <div class="carousel-view" [@fade]="visibleItemState[0]">
       <article class="slide">

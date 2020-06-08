@@ -11,7 +11,7 @@ import { Globals } from 'src/app/globals';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private readonly globals: Globals) {
+  constructor(public globals: Globals) {
   }
 
   ngOnInit() {

@@ -12,7 +12,7 @@ import { Globals } from 'src/app/globals';
 })
 export class AboutDesignComponent implements OnInit {
 
-  constructor(private readonly globals: Globals) { }
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
   }
@@ -30,5 +30,9 @@ export class AboutDesignComponent implements OnInit {
     } else {
       return false;
     }
+  }
+
+  goToSection(index: number){
+    this.globals.goToSection(index);
   }
 }

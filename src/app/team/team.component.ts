@@ -12,9 +12,13 @@ export class TeamComponent implements OnInit {
 
   public visibleItemState = [true, false, false];
   currentSlide = 0;
-  constructor(private readonly globals: Globals) { }
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
     this.visibleItemState[0] = true;
+  }
+
+  goToSection(index: number){
+    this.globals.goToSection(index);
   }
 }

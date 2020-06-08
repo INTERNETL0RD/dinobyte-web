@@ -12,7 +12,7 @@ import { Globals } from 'src/app/globals';
 })
 export class AboutTechnologyComponent implements OnInit {
 
-  constructor(private readonly globals: Globals) {
+  constructor(public globals: Globals) {
   }
 
   ngOnInit() {
@@ -26,6 +26,10 @@ export class AboutTechnologyComponent implements OnInit {
     } else {
       return false;
     }
+  }
+
+  goToSection(index: number){
+    this.globals.goToSection(index);
   }
 
 }
