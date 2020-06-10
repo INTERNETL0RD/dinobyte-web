@@ -12,6 +12,7 @@ import { Globals } from './globals';
 import { TeamModule } from './team/team.module';
 import { ScrollerModule } from './scroller/scroller.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SidenavModule } from './sidenav/sidenav.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AboutDesignModule,
     BrowserAnimationsModule,
     TeamModule,
-    ScrollerModule
+    ScrollerModule,
+    SidenavModule
   ],
   providers: [Globals],
   bootstrap: [AppComponent]

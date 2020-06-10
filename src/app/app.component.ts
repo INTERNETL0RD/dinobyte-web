@@ -21,11 +21,11 @@ export class AppComponent implements OnInit {
     if (!this.isExecuting) {
       this.isExecuting = true;
       const previousSelectedItem = this.globals.visibleComponents.indexOf(true);
-      if (event.deltaY > 0) {
+      if (event.deltaY > 0 && previousSelectedItem < this.globals.visibleComponents.length - 1) {
         //we do this to hide the component and trigger the hide animation
         this.globals.visibleComponents[previousSelectedItem] = false;
         this.globals.visibleComponents[previousSelectedItem + 1] = true;
-      } else if (event.deltaY < 0) {
+      } else if (event.deltaY < 0 && previousSelectedItem > 0) {
         this.globals.visibleComponents[previousSelectedItem] = false;
         this.globals.visibleComponents[previousSelectedItem - 1] = true;
       }

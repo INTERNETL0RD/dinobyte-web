@@ -1,10 +1,13 @@
-<div class="bg-image"></div>
-<div (scroll)="onScroll($event)">
-  <router-outlet></router-outlet>
-  <app-navbar></app-navbar>
-  <app-scroller [flags]="globals.visibleComponents" [isColumn]="true"></app-scroller>
-  <app-home class="child-component"></app-home>
-  <app-about class="child-component"></app-about>
-  <app-about-design class="child-component"></app-about-design>
-  <app-team></app-team>
-</div> 
+<div class="container">
+  <app-sidenav></app-sidenav>
+  <div class="bg-image"></div>
+  <div (scroll)="onScroll($event)">
+    <router-outlet></router-outlet>
+    <app-navbar></app-navbar>
+    <app-scroller [flags]="globals.visibleComponents" [isColumn]="true"></app-scroller>
+    <app-home></app-home>
+    <app-about></app-about>
+    <app-about-design></app-about-design>
+    <app-team></app-team>
+  </div>
+</div>
