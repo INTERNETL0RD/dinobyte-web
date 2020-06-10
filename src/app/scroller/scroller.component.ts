@@ -10,8 +10,27 @@ import { Style } from '../entities/styles.entity';
 
 export class ScrollerComponent implements OnInit {
 
-  @Input() isColumn: boolean;
-  @Input() flags: boolean[];
+  private _flags: boolean[] = [];
+  private _isColumn: boolean;
+
+  @Input()
+  set isColumn(isColumn: boolean){
+    this._isColumn = isColumn;
+  }
+
+  get isColumn(): boolean {
+    return this._isColumn;
+  }
+
+  @Input()
+  set flags(flags: boolean[]){
+    this._flags = flags;
+  }
+
+  get flags(): boolean[]{
+    return this._flags;
+  }
+
   public style: Style;
 
   constructor() {
@@ -45,7 +64,9 @@ export class ScrollerComponent implements OnInit {
     for (let index = 0; index < this.flags.length; index++) {
       if (index === flagIndex) {
         if (!this.flags[flagIndex]) {
-          this.flags[flagIndex] = !this.flags[flagIndex];
+          const newArray = this.flags;
+          newArray[flagIndex] = !this.flags[flagIndex];
+          this.flags = newArray;
         }
       } else {
         this.flags[index] = false;

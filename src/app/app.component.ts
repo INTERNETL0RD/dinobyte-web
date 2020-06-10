@@ -8,7 +8,6 @@ import { Globals } from './globals';
 })
 export class AppComponent implements OnInit {
   private isExecuting = false;
-  private counter = 0;
 
   constructor(public globals: Globals) { }
 
@@ -21,15 +20,13 @@ export class AppComponent implements OnInit {
   onScroll(event) {
     if (!this.isExecuting) {
       this.isExecuting = true;
-      if (event.deltaY > 0 && this.counter <= 2 && this.counter >= 0) {
-        //we do this to hide the component and trigger the hide animation
-        this.globals.visibleComponents[this.counter] = false;
-        this.counter++;
-        this.globals.visibleComponents[this.counter] = true;
-      } else if (event.deltaY < 0 && this.counter > 0 && this.counter <= 3) {
-        this.globals.visibleComponents[this.counter] = false;
-        this.counter--;
-        this.globals.visibleComponents[this.counter] = true;
+      const selectedView = this.globals.visibleComponents.indexOf(true);
+      if (event.deltaY > 0 && selectedView !== this.globals.visibleComponents.length - 1) {
+        this.globals.visibleComponents[selectedView] = false;
+        this.globals.visibleComponents[selectedView + 1] = true;
+      } else if (event.deltaY < 0 && selectedView !== 0) {
+        this.globals.visibleComponents[selectedView] = false;
+        this.globals.visibleComponents[selectedView - 1] = true;
       }
       setTimeout(() => { this.isExecuting = false; }, 1000);
     }
