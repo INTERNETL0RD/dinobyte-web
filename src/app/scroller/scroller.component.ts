@@ -25,7 +25,6 @@ export class ScrollerComponent implements OnInit {
         position: 'fixed',
         right: '5%',
         top: '45%',
-        z_index: 10000
       } as Style;
     }
     else {
@@ -35,7 +34,6 @@ export class ScrollerComponent implements OnInit {
         justify_content: 'center',
         right: '0',
         top: '0',
-        z_index: 10000,
         position: 'inherit',
       } as Style;
     }

@@ -1,5 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { fade, move } from 'src/app/animations';
+import { Component, OnInit } from '@angular/core';
+import { fade } from 'src/app/animations';
 import { Globals } from 'src/app/globals';
 
 
@@ -7,7 +7,7 @@ import { Globals } from 'src/app/globals';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.sass'],
-  animations: [fade, move]
+  animations: [fade]
 })
 export class HomeComponent implements OnInit {
 

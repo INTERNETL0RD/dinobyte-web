@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fade, move } from 'src/app/animations';
+import { fade } from 'src/app/animations';
 import { Globals } from 'src/app/globals';
 
 @Component({
@@ -7,7 +7,7 @@ import { Globals } from 'src/app/globals';
   templateUrl: './about-design.component.html',
   styleUrls: ['./about-design.component.sass'],
   animations: [
-    fade, move
+    fade
   ]
 })
 export class AboutDesignComponent implements OnInit {

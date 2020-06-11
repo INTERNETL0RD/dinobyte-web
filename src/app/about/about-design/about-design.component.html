@@ -1,11 +1,15 @@
-<div class="container" [@fade]="globals.visibleComponents[2]"  id="about-design">
+<div class="container" [@fade]="globals.visibleComponents[2]" id="about-design">
   <div class="left-container">
     <div class="header">
       <img class="logo" src="assets/images/monograma-blanco.svg" alt="Kiwi standing on oval">
       <h1>DinoByte ¿Qué somos?</h1>
-      <a href="/"><h1>Home</h1></a>
-      <a href="#team" (click)="goToSection(3)"><h1>Equipo</h1></a>
-      <button><em class="fas fa-bars"></em></button>
+      <a href="/">
+        <h1>Home</h1>
+      </a>
+      <a href="#team" (click)="goToSection(3)">
+        <h1>Equipo</h1>
+      </a>
+      <button (click)="globals.isSidenavVisible = true"><em class="fas fa-bars"></em></button>
     </div>
     <div class="subheader">
       <hr>
@@ -13,14 +17,16 @@
     </div>
     <article class="description">
       <h2>Diseño adaptado a tus preferencias</h2>
-      <p>Orientamos a nuestros clientes en la elección de los aspectos gráficos para conseguir 
-        los mejores resultados.<span class="marked">Diseños de interfaz personalizados, temáticas, branding y mucho más</span></p>
+      <p>Orientamos a nuestros clientes en la elección de los aspectos gráficos para conseguir
+        los mejores resultados.<span class="marked">Diseños de interfaz personalizados, temáticas, branding y mucho
+          más</span></p>
     </article>
     <article class="designitemscontainer">
       <h2 class="designservices">Design Services</h2>
       <ul>
         <img class="checkicon" src="assets/icons/check_icon.png" alt="Flutter icon">
-        <li>Elaboramos a tu gusto interfaces para tu proyecto utilizando recursos de excelente calidad y obteniendo la mejor experiencia y resultados.</li>
+        <li>Elaboramos a tu gusto interfaces para tu proyecto utilizando recursos de excelente calidad y obteniendo la
+          mejor experiencia y resultados.</li>
         <img class="idcardicon" src="assets/icons/idcard_icon.png" alt="Angular icon">
         <li>Material de empresa u oficina, adaptamos tu marca donde quieras.</li>
         <img class="penicon" src="assets/icons/pen_icon.png" alt="Firebase icon">

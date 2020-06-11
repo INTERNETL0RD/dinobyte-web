@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Globals {
+
+  isSidenavVisible = false;
+
   visibleComponents = [true, false, false, false];
 
   goToSection(index: number){
