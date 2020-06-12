@@ -37,6 +37,7 @@ export class ScrollerComponent implements OnInit {
         top: '0',
         z_index: 1,
         position: 'inherit',
+        margin_left: '5vw'
       } as Style;
     }
   }

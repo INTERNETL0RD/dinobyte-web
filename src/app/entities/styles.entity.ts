@@ -5,5 +5,6 @@ export interface Style{
     flex_direction: string;
     justify_content: string;
     right: string;
-    top: string; 
+    top: string;
+    margin_left: string; 
 }

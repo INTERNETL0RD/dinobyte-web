@@ -5,7 +5,8 @@
     'position': style.position, 
     'right': style.right,
     'top': style.top,
-    'z-index': style.z_index}">
+    'z-index': style.z_index,
+    'margin-left': style.margin_left}">
     <li *ngFor="let flag of flags; let i = index" class="outter" onkeydown="" [class.outter-selected]="flag"
         [class.outter-unselected]="!flag" (click)="changeState(i)">
         <div class="inner" [class.inner-selected]="flag" [class.inner-unselected]="!flag"></div>
