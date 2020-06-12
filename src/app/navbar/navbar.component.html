@@ -1,4 +1,4 @@
-<div class="container" id="home" [@fade]="globals.visibleComponents[0]">
+<div class="container" id="home" *ngIf="globals.visibleComponents[0]" [@fade]>
     <img src="assets/images/monograma-blanco.svg" alt="Kiwi standing on oval">
     <a href="/"><h1>Home</h1></a>
     <a href="#about" (click)="goToSection(1)"><h1>¿Qué somos?</h1></a>

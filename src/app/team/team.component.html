@@ -1,4 +1,4 @@
-<div class="container" id="team" [@fade]="globals.visibleComponents[3]">
+<div class="container" id="team" *ngIf="globals.visibleComponents[3]" [@fade]>
   <div class="header">
     <img class="logo" src="assets/images/monograma-blanco.svg" alt="Kiwi standing on oval">
     <h1>Equipo Dinobyte</h1>
@@ -11,7 +11,7 @@
     <span class="brand">DinoByte S.C. Software development & Graphic Design</span>
   </div>
   <div class="carousel">
-    <div class="carousel-view" [@fade]="visibleItemState[0]">
+    <div class="carousel-view" [@fade2]="visibleItemState[0]">
       <article class="slide">
         <div class="slide-header">
           <div class="image" id="javi"></div>
@@ -50,7 +50,7 @@
         </ul>
       </article>
     </div>
-    <div class="carousel-view" [@fade]="visibleItemState[1]">
+    <div class="carousel-view" [@fade2]="visibleItemState[1]">
       <article class="slide">
         <div class="slide-header">
           <div class="image" id="skere"></div>
@@ -89,7 +89,7 @@
         </ul>
       </article>
     </div>
-    <div class="carousel-view" [@fade]="visibleItemState[2]">
+    <div class="carousel-view" [@fade2]="visibleItemState[2]">
       <article class="slide">
         <h3>¡Consúltanos!</h3>
         <div class="last-slide.content">

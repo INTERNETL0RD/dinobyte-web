@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Globals } from '../globals';
-import { fade } from '../animations';
+import { fade, fade2 } from '../animations';
 
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.sass'],
-  animations: [fade]
+  animations: [fade, fade2]
 })
 export class TeamComponent implements OnInit {
 
@@ -15,7 +15,6 @@ export class TeamComponent implements OnInit {
   constructor(public globals: Globals) { }
 
   ngOnInit() {
-    this.visibleItemState[0] = true;
   }
 
   goToSection(index: number){

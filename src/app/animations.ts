@@ -1,6 +1,6 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
-export const fade = trigger('fade', [
+export const fade2 = trigger('fade2', [
     state('true', style({ opacity: 1 })),
     state('false', style({ opacity: 0, zIndex: -1 })),
     transition('false <=> true', animate(500))
@@ -16,3 +16,12 @@ export const move = trigger('move', [
     ])
 ]);
 
+export const fade = trigger('fade', [
+    transition(':enter', [
+        style({ transform: 'translateY(100%)' }),
+        animate('200ms ease-in', style({ transform: 'translateY(0%)' }))
+    ]),
+    transition(':leave', [
+        animate('200ms ease-in', style({ transform: 'translateY(100%)' }))
+    ])
+]);

@@ -1,4 +1,4 @@
-<div class="technology container" [@fade]="globals.visibleComponents[1]" id="about-technology">
+<div class="technology container" *ngIf="globals.visibleComponents[1]" [@fade] id="about-technology">
   <div class="left-container">
     <div class="header">
       <img class="logo" src="assets/images/monograma-blanco.svg" alt="Kiwi standing on oval">

@@ -25,6 +25,7 @@ export class ScrollerComponent implements OnInit {
         position: 'fixed',
         right: '5%',
         top: '45%',
+        z_index: 1
       } as Style;
     }
     else {
@@ -34,17 +35,20 @@ export class ScrollerComponent implements OnInit {
         justify_content: 'center',
         right: '0',
         top: '0',
+        z_index: 1,
         position: 'inherit',
       } as Style;
     }
   }
 
   changeState(flagIndex: number) {
-    for (let index = 0; index < this.flags.length; index++) {
-      if (index === flagIndex && !this.flags[flagIndex]) {
-        this.flags[flagIndex] = !this.flags[flagIndex];
-      } else {
-        this.flags[index] = false;
+    if(this.flags[flagIndex] === false) {
+      for (let index = 0; index < this.flags.length; index++) {
+        if (index === flagIndex && !this.flags[flagIndex]) {
+          this.flags[flagIndex] = !this.flags[flagIndex];
+        } else {
+          this.flags[index] = false;
+        }
       }
     }
   }
