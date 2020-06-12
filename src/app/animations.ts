@@ -8,8 +8,8 @@ export const fade2 = trigger('fade2', [
 
 export const move = trigger('move', [
     transition(':enter', [
-        style({ transform: 'translateX(100%)' }),
-        animate('200ms ease-in', style({ transform: 'translateX(0%)' }))
+        style({ opacity: 1 }), animate(50),
+        
     ]),
     transition(':leave', [
         animate('500ms ease-in', style({ transform: 'translateX(100%)' }))
@@ -19,9 +19,10 @@ export const move = trigger('move', [
 export const fade = trigger('fade', [
     transition(':enter', [
         style({ transform: 'translateY(100%)' }),
-        animate('200ms ease-in', style({ transform: 'translateY(0%)' }))
+        animate('500ms ease-in', style({ transform: 'translateY(0%)' }))
     ]),
-    transition(':leave', [
-        animate('200ms ease-in', style({ transform: 'translateY(100%)' }))
-    ])
+    transition(':enter', [
+        style({ opacity: 0 }), animate(700),
+        
+    ]),
 ]);
