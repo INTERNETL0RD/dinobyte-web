@@ -13,6 +13,10 @@ import { TeamModule } from './team/team.module';
 import { ScrollerModule } from './scroller/scroller.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidenavModule } from './sidenav/sidenav.module';
+import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
+import { Platform } from '@angular/cdk/platform';
+import { MobileHomeModule } from './mobile/home/mobile-home.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -28,9 +32,11 @@ import { SidenavModule } from './sidenav/sidenav.module';
     BrowserAnimationsModule,
     TeamModule,
     ScrollerModule,
-    SidenavModule
+    SidenavModule,
+    MobileHomeModule,
+    FontAwesomeModule
   ],
-  providers: [Globals],
+  providers: [Globals, BreakpointObserver, MediaMatcher, Platform],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

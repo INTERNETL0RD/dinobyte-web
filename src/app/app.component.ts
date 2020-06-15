@@ -1,5 +1,10 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Globals } from './globals';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+import { LayoutService } from './layout/layout.service';
+import { CustomBreakpointNames } from './breakpoints/breakpoints.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +13,19 @@ import { Globals } from './globals';
 })
 export class AppComponent implements OnInit {
   private isExecuting = false;
+  public isMobile = false;
 
-  constructor(public globals: Globals) { }
+  constructor(public globals: Globals, private readonly layoutService: LayoutService) {
+  }
 
   ngOnInit() {
+    this.layoutService.subscribeToLayoutChanges().subscribe(observerResponse => {
+      if(this.layoutService.isBreakpointActive(CustomBreakpointNames.small)) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    });
   }
 
   title = 'dinobyte';
