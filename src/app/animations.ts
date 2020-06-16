@@ -8,7 +8,7 @@ export const fade2 = trigger('fade2', [
 
 export const move = trigger('move', [
     transition(':enter', [
-        style({ opacity: 1 }), animate(500)
+        style({ transform: 'translateX(100%)' }), animate(500)
 
     ]),
     transition(':leave', [
