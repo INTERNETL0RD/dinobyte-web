@@ -17,11 +17,12 @@ import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
 import { Platform } from '@angular/cdk/platform';
 import { MobileHomeModule } from './mobile/home/mobile-home.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MobileSidenavModule } from './mobile/mobile-sidenav/mobile-sidenav.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ScrollerModule,
     SidenavModule,
     MobileHomeModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MobileSidenavModule
   ],
   providers: [Globals, BreakpointObserver, MediaMatcher, Platform],
   bootstrap: [AppComponent]

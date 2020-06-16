@@ -1,0 +1,15 @@
+<ng-container *ngIf="globals.isSidenavVisible" [@move]>
+    <div class="blur"></div>
+    <div class="container">
+        <em class="fas fa-times" (click)="globals.isSidenavVisible = false"></em>
+        <hr>
+        <ul>
+            <li>Home</li>
+            <li>¿Qué somos?</li>
+            <li>Equipo</li>
+            <li>Packs</li>
+        </ul>
+        <hr>
+        <em class="fas fa-cog"></em>
+    </div>
+</ng-container>

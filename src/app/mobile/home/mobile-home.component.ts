@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from 'src/app/globals';
 
 @Component({
   selector: 'home-mobile',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobileHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
   }
