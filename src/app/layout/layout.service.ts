@@ -24,7 +24,6 @@ export class LayoutService {
       this.activeBreakpoints = [];
     
       Object.keys(breakpoints).forEach((key) => {
-        console.log(key)
         if (breakpoints[key]) {
           this.activeBreakpoints.push(this.breakpointService.getBreakpointName(key));
         }

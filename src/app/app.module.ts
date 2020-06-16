@@ -18,6 +18,7 @@ import { Platform } from '@angular/cdk/platform';
 import { MobileHomeModule } from './mobile/home/mobile-home.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MobileSidenavModule } from './mobile/mobile-sidenav/mobile-sidenav.module';
+import { MobileAboutTechnologyModule } from './mobile/about/mobile-about-technology.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MobileSidenavModule } from './mobile/mobile-sidenav/mobile-sidenav.modu
     SidenavModule,
     MobileHomeModule,
     FontAwesomeModule,
-    MobileSidenavModule
+    MobileSidenavModule,
+    MobileAboutTechnologyModule
   ],
   providers: [Globals, BreakpointObserver, MediaMatcher, Platform],
   bootstrap: [AppComponent]
