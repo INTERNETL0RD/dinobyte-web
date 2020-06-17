@@ -4,14 +4,15 @@
     flex-direction: column
     width: 100vw
     height: 100vh
-    top: 100vh
     font-family: 'cocogoose_classic_trialmedium',
     color: white
+    top: 200vh
 
 .header
     display: flex
     flex-direction: row
     justify-content: space-around
+    align-items: center
     font-size: 5vw
     padding-top: 3vh
 
@@ -19,17 +20,30 @@
     display: flex
     flex-direction: column
     justify-content: space-around
-    padding-left: 8vw
-    padding-right: 7vw
-    padding-top: 1vh
+    align-items: center
 
-h1
-    font-family: 'cocogoose_classic_trialmedium' 
+.carousel
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    height: 56vh
+
+.slide
+    position: absolute
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    width: 100vw
+    top: 35vh
+
+.scroller, .scroller *, .scroller > *
+    margin: 0
+    padding: 0
 
 h2
     font-size: 10vw
-    font-weight: bold
-    align-self: center
 
 button
     background-color: #ffffff00
@@ -43,9 +57,17 @@ button:focus
 em
     font-size: 10vw
 
-p
-    font-family: 'Comfortaa'
-    font-size: 6vw
+img
+    height: 22.32vh
+    width: 48.31vw
 
-span
-    color: #71B64B
+p
+    padding-top: 3vh
+    font-family: 'Comfortaa'
+    font-size: 7vw
+    width: 80vw
+
+hr
+    width: 90vw
+    height: 1px
+    background-color: white

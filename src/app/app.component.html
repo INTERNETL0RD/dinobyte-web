@@ -1,23 +1,24 @@
 <div *ngIf="!isMobile" class="container">
-  <div class="bg-image"></div>
-  <div (scroll)="onScroll($event)">
-    <router-outlet></router-outlet>
-    <app-navbar></app-navbar>
-    <app-scroller [flags]="globals.visibleComponents" [isColumn]="true"></app-scroller>
-    <app-home></app-home>
-    <app-about></app-about>
-    <app-about-design></app-about-design>
-    <app-team></app-team>
-    <app-sidenav></app-sidenav>
-  </div>
+    <div class="bg-image"></div>
+    <div (scroll)="onScroll($event)">
+        <router-outlet></router-outlet>
+        <app-navbar></app-navbar>
+        <app-scroller [flags]="globals.visibleComponents" [isColumn]="true"></app-scroller>
+        <app-home></app-home>
+        <app-about></app-about>
+        <app-about-design></app-about-design>
+        <app-team></app-team>
+        <app-sidenav></app-sidenav>
+    </div>
 </div>
 
 <ng-container *ngIf="isMobile">
-  <div class="bg-image-mobile"></div>
-  <div class="mobile-container">
-    <app-mobile-sidenav></app-mobile-sidenav>
-    <router-outlet></router-outlet>
-    <home-mobile></home-mobile>
-    <app-mobile-about-technology></app-mobile-about-technology>
-  </div>
+    <div class="bg-image-mobile"></div>
+    <div class="mobile-container">
+        <app-mobile-sidenav></app-mobile-sidenav>
+        <router-outlet></router-outlet>
+        <home-mobile></home-mobile>
+        <app-mobile-about-technology></app-mobile-about-technology>
+        <app-about-technology-carousel></app-about-technology-carousel>
+    </div>
 </ng-container>

@@ -1,0 +1,26 @@
+<div class="container" data-aos="fade-right">
+    <div class="header">
+        <h1>¿Qué somos?</h1>
+        <button (click)="globals.isSidenavVisible = true"><em class="fas fa-bars"></em></button>
+    </div>
+    <div class="content">
+        <hr>
+        <h2>Software</h2>
+        <div class="carousel">
+            <div class="slide" [@fade2]="visibleItemState[0]">
+                <img src="../../../assets/icons/flutter_icon.png" alt="fltutter icon">
+                <p>Flutter. Rápido y flexible con máximo rendimiento en iOS y Android. Programación sin límites de diseño.
+                </p>
+            </div>
+            <div class="slide" [@fade2]="visibleItemState[1]">
+                <img src="../../../assets/icons/angular_icon.png">
+                <p>Angular 9 para el desarrollo de la web más sencilla hasta tu proyecto más ambicioso.</p>
+            </div>
+            <div class="slide" [@fade2]="visibleItemState[2]">
+                <img src="../../../assets/icons/firebase_icon.png">
+                <p>Hosting con certificados SSL y base de datos con escalabilidad ilimitada.</p>
+            </div>
+        </div>
+        <app-scroller [flags]="visibleItemState" [isColumn]="false" class="scroller"></app-scroller>
+    </div>
+</div>
