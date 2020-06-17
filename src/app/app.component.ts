@@ -12,15 +12,17 @@ import { CustomBreakpointNames } from './breakpoints/breakpoints.service';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent implements OnInit {
-  private isExecuting = false;
-  public isMobile = false;
 
   constructor(public globals: Globals, private readonly layoutService: LayoutService) {
   }
+  private isExecuting = false;
+  public isMobile = false;
+
+  title = 'dinobyte';
 
   ngOnInit() {
     this.layoutService.subscribeToLayoutChanges().subscribe(observerResponse => {
-      if(this.layoutService.isBreakpointActive(CustomBreakpointNames.small)) {
+      if (this.layoutService.isBreakpointActive(CustomBreakpointNames.small)) {
         this.isMobile = true;
       } else {
         this.isMobile = false;
@@ -28,15 +30,13 @@ export class AppComponent implements OnInit {
     });
   }
 
-  title = 'dinobyte';
-
   @HostListener('mousewheel', ['$event']) // for window scroll events
   onScroll(event) {
     if (!this.isExecuting) {
       this.isExecuting = true;
       const previousSelectedItem = this.globals.visibleComponents.indexOf(true);
       if (event.deltaY > 0 && previousSelectedItem < this.globals.visibleComponents.length - 1) {
-        //we do this to hide the component and trigger the hide animation
+        // we do this to hide the component and trigger the hide animation
         this.globals.visibleComponents[previousSelectedItem] = false;
         this.globals.visibleComponents[previousSelectedItem + 1] = true;
       } else if (event.deltaY < 0 && previousSelectedItem > 0) {

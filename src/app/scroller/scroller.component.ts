@@ -27,8 +27,7 @@ export class ScrollerComponent implements OnInit {
         top: '45%',
         z_index: 1
       } as Style;
-    }
-    else {
+    } else {
       this.style = {
         display: 'flex',
         flex_direction: 'row',
@@ -43,7 +42,7 @@ export class ScrollerComponent implements OnInit {
   }
 
   changeState(flagIndex: number) {
-    if(this.flags[flagIndex] === false) {
+    if (this.flags[flagIndex] === false) {
       for (let index = 0; index < this.flags.length; index++) {
         if (index === flagIndex && !this.flags[flagIndex]) {
           this.flags[flagIndex] = !this.flags[flagIndex];

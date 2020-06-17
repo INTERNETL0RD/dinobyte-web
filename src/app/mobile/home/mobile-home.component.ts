@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Globals } from 'src/app/globals';
 
 @Component({
-  selector: 'home-mobile',
+  selector: 'app-home-mobile',
   templateUrl: './mobile-home.component.html',
   styleUrls: ['./mobile-home.component.sass']
 })

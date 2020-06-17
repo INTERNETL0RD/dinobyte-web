@@ -12,7 +12,7 @@ export class LayoutService {
   private activeBreakpoints: string[] = [];
 
   constructor(private readonly breakpointObserver: BreakpointObserver,
-    private readonly breakpointService: BreakpointsService) { }
+              private readonly breakpointService: BreakpointsService) { }
 
     subscribeToLayoutChanges(): Observable<string[]> {
       return this.breakpointObserver
@@ -22,13 +22,13 @@ export class LayoutService {
 
     parseBreakpointsResponse(breakpoints): string[] {
       this.activeBreakpoints = [];
-    
+
       Object.keys(breakpoints).forEach((key) => {
         if (breakpoints[key]) {
           this.activeBreakpoints.push(this.breakpointService.getBreakpointName(key));
         }
       });
-  
+
       return this.activeBreakpoints;
     }
 

@@ -15,7 +15,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToSection(index: number){
+  goToSection(index: number) {
 
     this.globals.goToSection(index);
   }

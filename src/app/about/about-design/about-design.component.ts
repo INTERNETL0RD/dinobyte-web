@@ -32,7 +32,7 @@ export class AboutDesignComponent implements OnInit {
     }
   }
 
-  goToSection(index: number){
+  goToSection(index: number) {
     this.globals.goToSection(index);
   }
 }
