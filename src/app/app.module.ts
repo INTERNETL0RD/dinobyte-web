@@ -17,11 +17,12 @@ import { BreakpointObserver, MediaMatcher } from '@angular/cdk/layout';
 import { Platform } from '@angular/cdk/platform';
 import { MobileHomeModule } from './mobile/home/mobile-home.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MobileSidenavModule } from './mobile/mobile-sidenav/mobile-sidenav.module';
 import { MobileAboutTechnologyModule } from './mobile/about-technology/mobile-about-technology.module';
 import { AboutTechnologyCarouselModule } from './mobile/about-technology-carousel/about-technology-carousel.module';
 import { MobileAboutDesignModule } from './mobile/about-design/mobile-about-design.module';
 import { MobileAboutDesignCarouselModule } from './mobile/about-design-arousel/mobile-about-design-carousel.module';
+import { MobileSidenavModule } from './mobile/sidenav/mobile-sidenav.module';
+import { MobileTeamModule } from './mobile/team/mobile-team.module';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MobileAboutDesignCarouselModule } from './mobile/about-design-arousel/m
     MobileAboutTechnologyModule,
     AboutTechnologyCarouselModule,
     MobileAboutDesignModule,
-    MobileAboutDesignCarouselModule
+    MobileAboutDesignCarouselModule,
+    MobileTeamModule
   ],
   providers: [Globals, BreakpointObserver, MediaMatcher, Platform],
   bootstrap: [AppComponent]
