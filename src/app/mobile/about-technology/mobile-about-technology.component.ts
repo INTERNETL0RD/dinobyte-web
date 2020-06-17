@@ -9,7 +9,7 @@ import { Globals } from 'src/app/globals';
 })
 export class MobileAboutTechnologyComponent implements OnInit {
 
-  constructor(public globals: Globals) { }
+  constructor(private readonly globals: Globals) { }
 
   ngOnInit() {
     AOS.init();

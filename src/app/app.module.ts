@@ -20,6 +20,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MobileSidenavModule } from './mobile/mobile-sidenav/mobile-sidenav.module';
 import { MobileAboutTechnologyModule } from './mobile/about-technology/mobile-about-technology.module';
 import { AboutTechnologyCarouselModule } from './mobile/about-technology-carousel/about-technology-carousel.module';
+import { MobileAboutDesignModule } from './mobile/about-design/mobile-about-design.module';
+import { MobileAboutDesignCarouselModule } from './mobile/about-design-arousel/mobile-about-design-carousel.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { AboutTechnologyCarouselModule } from './mobile/about-technology-carouse
     FontAwesomeModule,
     MobileSidenavModule,
     MobileAboutTechnologyModule,
-    AboutTechnologyCarouselModule
+    AboutTechnologyCarouselModule,
+    MobileAboutDesignModule,
+    MobileAboutDesignCarouselModule
   ],
   providers: [Globals, BreakpointObserver, MediaMatcher, Platform],
   bootstrap: [AppComponent]
