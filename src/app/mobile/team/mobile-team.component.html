@@ -1,10 +1,89 @@
-<div class="container" data-aos="fade-right">
+<div class="container" data-aos="fade-right" id="team">
     <div class="header">
         <h1>Nosotros</h1>
         <button (click)="globals.isSidenavVisible = true"><em class="fas fa-bars"></em></button>
     </div>
     <div class="content">
         <hr>
-
+        <div class="columns">
+            <div class="column" [@fade2]="visibleItemState[0]">
+                <div class="subheader">
+                    <div class="img" id="javi"></div>
+                    <div class="column-header">
+                        <p><span class="shadowed">Ágil, constante</span></p>
+                        <h2>Javier Ucler</h2>
+                        <p class="subtitle"><span>CTO, Co-founder</span></p>
+                    </div>
+                </div>
+                <p class="description">¿Tienes problemas con tu página web?, ¿ha quedado obsoleta por un motivo que desconoces? No te preocupes que nuestro hábil programador será capaz de reconstruir ese código que lleva años sin tocarse. Capaz de conseguir el máximo rendimiento.</p>
+                <ul>
+                    <li><span>Desarrollo WEB/ APP</span></li>
+                    <li>javier.ucler@dinobyte.es</li>
+                </ul>
+            </div>
+            <div class="column" [@fade2]="visibleItemState[1]">
+                <div class="subheader">
+                    <div class="img" id="jared"></div>
+                    <div class="column-header">
+                        <p><span class="shadowed">Responsable, objetivo</span></p>
+                        <h2>Gerard Franco</h2>
+                        <p class="subtitle"><span>COO</span></p>
+                    </div>
+                </div>
+                <p class="description">Iniciativa como foco principal, prudente y eficaz. Encargado de dirigir y proyectar nuestros objetivos de la manera más fluida posible.</p>
+                <ul>
+                    <li><span>Jefe dirección empresarial, marketing, recursos humanos</span></li>
+                    <li>gerard.f@dinobyte.es</li>
+                </ul>
+            </div>
+            <div class="column" [@fade2]="visibleItemState[2]">
+                <div class="subheader">
+                    <div class="img" id="estif"></div>
+                    <div class="column-header">
+                        <p><span class="shadowed">Hábil, sagaz</span></p>
+                        <h2>Steve James</h2>
+                        <p class="subtitle"><span>CAA, Co-founder</span></p>
+                    </div>
+                </div>
+                <p class="description">Capaz de conseguir todo lo que se proponga. Perfecciona cada línea de código escrita con facilidad. ¡Todo un erudito de la programación!</p>
+                <ul>
+                    <li><span>Arquitectura de sistemas</span></li>
+                    <li><span>Desarrollo WEB/ APP</span></li>
+                    <li>steve.james@dinobyte.es</li>
+                </ul>
+            </div>
+            <div class="column" [@fade2]="visibleItemState[3]">
+                <div class="subheader">
+                    <div class="img" id="isma"></div>
+                    <div class="column-header">
+                        <p><span class="shadowed">Innovador, creativo</span></p>
+                        <h2>Ismael Garcia</h2>
+                        <p class="subtitle"><span>CDO, Co-founder</span></p>
+                    </div>
+                </div>
+                <p class="description">El hemisferio derecho del motor que mueve esta empresa. Es capaz de lograr cualquier tipo de propósito en un periquete. Camaleónico en el trabajo, empático con el cliente.</p>
+                <ul>
+                    <li><span>Branding, graphic design, UI/ UX designer</span></li>
+                    <li>isma.garcia@dinobyte.es</li>
+                </ul>
+            </div>
+            <div class="column" [@fade2]="visibleItemState[4]">
+                <div class="subheader">
+                    <div class="img" id="victor"></div>
+                    <div class="column-header">
+                        <p><span class="shadowed">Rápido y eficaz</span></p>
+                        <h2>Victor García</h2>
+                        <p class="subtitle"><span>Desarrollo WEB/APP</span></p>
+                    </div>
+                </div>
+                <p class="description">Nuestro programador más curtido, dispuesto a ofrecerte la mejor experiencia a nivel técnico y profesional siempre con una sonrisa de oreja a oreja.</p>
+                <ul>
+                    <li><span>Barista profesional</span></li>
+                    <li><span>Desarrollo WEB/ APP</span></li>
+                    <li>victor.garcia@dinobyte.es</li>
+                </ul>
+            </div>
+        </div>
+        <app-scroller [isColumn]="false" [flags]="visibleItemState"></app-scroller>
     </div>
 </div>

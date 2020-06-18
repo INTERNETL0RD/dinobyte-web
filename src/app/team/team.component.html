@@ -1,102 +1,96 @@
 <div class="container" id="team" *ngIf="globals.visibleComponents[3]" [@fade]>
-  <div class="header">
-    <img class="logo" src="assets/images/monograma-blanco.svg" alt="Kiwi standing on oval">
-    <h1>Equipo Dinobyte</h1>
-    <a href="/">
-      <h1>Home</h1>
-    </a>
-    <a href="#team" (click)="goToSection(1)">
-      <h1>¿Qué somos?</h1>
-    </a>
-    <button (click)="globals.isSidenavVisible = true"><em class="fas fa-bars"></em></button>
-  </div>
-  <div class="subheader">
-    <hr>
-    <span class="brand">DinoByte S.C. Software development & Graphic Design</span>
-  </div>
-  <div class="carousel">
-    <div class="carousel-view" [@fade2]="visibleItemState[0]">
-      <article class="slide">
-        <div class="slide-header">
-          <div class="image" id="javi"></div>
-          <div class="slide-title">
-            <h2>Ágil, constante</h2>
-            <h3>Javier Ucler</h3>
-            <h4><span>CTO, Co-founder</span></h4>
-          </div>
-        </div>
-        <p class="slide-description">¿Tienes problemas con tu página web?, ¿ha quedado obsoleta por un motivo que
-          desconoces? No te preocupes que nuestro hábil programador será capaz de reconstruir ese código que lleva
-          años sin tocarse. Capaz de conseguir el máximo rendimiento.
-        </p>
-        <ul class="slide-info">
-          <li><span>Desarrollo WEB/ APP</span></li>
-          <li><span>Contacto: </span>javier.ucler@dinobyte.es</li>
-        </ul>
-      </article>
-      <article class="slide">
-        <div class="slide-header">
-          <div class="image" id="jared"></div>
-          <div class="slide-title">
-            <h2>Responsable, objetivo</h2>
-            <h3>Gerard Franco</h3>
-            <h4><span>COO, "En prácticas"</span></h4>
-          </div>
-        </div>
-        <p class="slide-description">Iniciativa como foco principal, prudente y eficaz. Encargado de dirigir y
-          proyectar nuestros objetivos de la manera más fluida posible.</p>
-        <ul class="slide-info">
-          <li><span>Jefe dirección empresarial, marketing, recursos humanos </span></li>
-          <li><span>Contacto:</span> gerard.f@dinobyte.es</li>
-        </ul>
-      </article>
+    <div class="header">
+        <img class="logo" src="assets/images/monograma-blanco.svg" alt="Kiwi standing on oval">
+        <h1>Equipo Dinobyte</h1>
+        <a href="/">
+            <h1>Home</h1>
+        </a>
+        <a href="#team" (click)="goToSection(1)">
+            <h1>¿Qué somos?</h1>
+        </a>
+        <button (click)="globals.isSidenavVisible = true"><em class="fas fa-bars"></em></button>
     </div>
-    <div class="carousel-view" [@fade2]="visibleItemState[1]">
-      <article class="slide">
-        <div class="slide-header">
-          <div class="image" id="skere"></div>
-          <div class="slide-title">
-            <h2>Hábil, sagaz</h2>
-            <h3>Steve James</h3>
-            <h4><span>CAA, Co-founder</span></h4>
-          </div>
-        </div>
-        <p class="slide-description">Capaz de conseguir todo lo que se proponga. Perfecciona cada línea de código
-          escrita con facilidad. ¡Todo un erudito de la programación! </p>
-        <ul class="slide-info">
-          <li><span>Arquitectura de sistemas</span></li>
-          <li><span>Desarrollo WEB/ APP</span></li>
-          <li><span>Contacto:</span> steve.james@dinobyte.es</li>
-        </ul>
-      </article>
-      <article class="slide">
-        <div class="slide-header">
-          <div class="image" id="plastidecors"></div>
-          <div class="slide-title">
-            <h2>Innovador, creativo</h2>
-            <h3>Ismael Garcia</h3>
-            <h4><span>CDO, Co-founder</span></h4>
-          </div>
-        </div>
-        <p class="slide-description">El hemisferio derecho del motor que mueve esta empresa. Es capaz de lograr
-          cualquier tipo de propósito en un periquete. Camaleónico en el trabajo, empático con el cliente.</p>
-        <ul class="slide-info">
-          <li><span>Branding, graphic design, UI/ UX designer</span></li>
-          <li><span>Contacto:</span> isma.garcia@dinobyte.es</li>
-        </ul>
-      </article>
+    <div class="subheader">
+        <hr>
+        <span class="brand">DinoByte S.C. Software development & Graphic Design</span>
     </div>
-    <div class="carousel-view" [@fade2]="visibleItemState[2]">
-      <article class="slide">
-        <h3>¡Consúltanos!</h3>
-        <div class="last-slide.content">
-          <p>Echa un vistazo
-            Packs para todos los gustos</p>
-          <span>Soluciona tus dudas con
+    <div class="carousel">
+        <div class="carousel-view" [@fade2]="visibleItemState[0]">
+            <article class="slide">
+                <div class="slide-header">
+                    <div class="image" id="javi"></div>
+                    <div class="slide-title">
+                        <h2>Ágil, constante</h2>
+                        <h3>Javier Ucler</h3>
+                        <h4><span>CTO, Co-founder</span></h4>
+                    </div>
+                </div>
+                <p class="slide-description">¿Tienes problemas con tu página web?, ¿ha quedado obsoleta por un motivo que desconoces? No te preocupes que nuestro hábil programador será capaz de reconstruir ese código que lleva años sin tocarse. Capaz de conseguir el máximo rendimiento.
+                </p>
+                <ul class="slide-info">
+                    <li><span>Desarrollo WEB/ APP</span></li>
+                    <li><span>Contacto: </span>javier.ucler@dinobyte.es</li>
+                </ul>
+            </article>
+            <article class="slide">
+                <div class="slide-header">
+                    <div class="image" id="jared"></div>
+                    <div class="slide-title">
+                        <h2>Responsable, objetivo</h2>
+                        <h3>Gerard Franco</h3>
+                        <h4><span>COO</span></h4>
+                    </div>
+                </div>
+                <p class="slide-description">Iniciativa como foco principal, prudente y eficaz. Encargado de dirigir y proyectar nuestros objetivos de la manera más fluida posible.</p>
+                <ul class="slide-info">
+                    <li><span>Jefe dirección empresarial, marketing, recursos humanos </span></li>
+                    <li><span>Contacto:</span> gerard.f@dinobyte.es</li>
+                </ul>
+            </article>
+        </div>
+        <div class="carousel-view" [@fade2]="visibleItemState[1]">
+            <article class="slide">
+                <div class="slide-header">
+                    <div class="image" id="skere"></div>
+                    <div class="slide-title">
+                        <h2>Hábil, sagaz</h2>
+                        <h3>Steve James</h3>
+                        <h4><span>CAA, Co-founder</span></h4>
+                    </div>
+                </div>
+                <p class="slide-description">Capaz de conseguir todo lo que se proponga. Perfecciona cada línea de código escrita con facilidad. ¡Todo un erudito de la programación! </p>
+                <ul class="slide-info">
+                    <li><span>Arquitectura de sistemas</span></li>
+                    <li><span>Desarrollo WEB/ APP</span></li>
+                    <li><span>Contacto:</span> steve.james@dinobyte.es</li>
+                </ul>
+            </article>
+            <article class="slide">
+                <div class="slide-header">
+                    <div class="image" id="plastidecors"></div>
+                    <div class="slide-title">
+                        <h2>Innovador, creativo</h2>
+                        <h3>Ismael Garcia</h3>
+                        <h4><span>CDO, Co-founder</span></h4>
+                    </div>
+                </div>
+                <p class="slide-description">El hemisferio derecho del motor que mueve esta empresa. Es capaz de lograr cualquier tipo de propósito en un periquete. Camaleónico en el trabajo, empático con el cliente.</p>
+                <ul class="slide-info">
+                    <li><span>Branding, graphic design, UI/ UX designer</span></li>
+                    <li><span>Contacto:</span> isma.garcia@dinobyte.es</li>
+                </ul>
+            </article>
+        </div>
+        <div class="carousel-view" [@fade2]="visibleItemState[2]">
+            <article class="slide">
+                <h3>¡Consúltanos!</h3>
+                <div class="last-slide.content">
+                    <p>Echa un vistazo Packs para todos los gustos</p>
+                    <span>Soluciona tus dudas con
             tan solo un click.</span>
+                </div>
+            </article>
         </div>
-      </article>
     </div>
-  </div>
-  <app-scroller [flags]="visibleItemState" [isColumn]="false"></app-scroller>
+    <app-scroller [flags]="visibleItemState" [isColumn]="false"></app-scroller>
 </div>
