@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class BreakpointsService {
   breakpoints: object = {
-    '(max-width: 1024px)': CustomBreakpointNames.small
+    '(max-width: 480px)': CustomBreakpointNames.small
   };
 
   getBreakpoints(): string[] {
