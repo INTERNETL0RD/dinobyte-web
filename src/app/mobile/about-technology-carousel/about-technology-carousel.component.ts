@@ -13,7 +13,7 @@ export class AboutTechnologyCarouselComponent implements OnInit {
 
   public visibleItemState = [true, false, false];
 
-  constructor(private readonly globals: Globals) { }
+  constructor(public globals: Globals) { }
 
   ngOnInit() {
     AOS.init();
