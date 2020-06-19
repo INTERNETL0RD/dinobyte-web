@@ -1,4 +1,4 @@
-<div class="container" data-aos="fade-right" id="home">
+<div class="container" [attr.data-aos]="!globals.isIOS() ? 'fade-right' : ''" id="home">
     <div class="header">
         <img src="../../../assets/images/monograma-blanco.svg">
         <button (click)="globals.isSidenavVisible = true"><em class="fas fa-bars"></em></button>

@@ -1,4 +1,4 @@
-<div class="container" data-aos="fade-right" id="team">
+<div class="container" [attr.data-aos]="!globals.isIOS() ? 'fade-right' : ''" id="team">
     <div class="header">
         <h1>Nosotros</h1>
         <button (click)="globals.isSidenavVisible = true"><em class="fas fa-bars"></em></button>

@@ -13,4 +13,18 @@ export class Globals {
     }
     this.visibleComponents[index] = true;
   }
+
+  isIOS() {
+
+    const iDevices = [
+      'iPad Simulator',
+      'iPhone Simulator',
+      'iPod Simulator',
+      'iPad',
+      'iPhone',
+      'iPod'
+    ];
+
+    return iDevices.includes(navigator.platform);
+  }
 }

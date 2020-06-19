@@ -1,10 +1,9 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Globals } from './globals';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
 import { LayoutService } from './layout/layout.service';
 import { CustomBreakpointNames } from './breakpoints/breakpoints.service';
+import AOS from 'aos';
+
 
 @Component({
   selector: 'app-root',
@@ -21,6 +20,7 @@ export class AppComponent implements OnInit {
   title = 'dinobyte';
 
   ngOnInit() {
+    AOS.init();
     this.layoutService.subscribeToLayoutChanges().subscribe(observerResponse => {
       if (this.layoutService.isBreakpointActive(CustomBreakpointNames.small)) {
         this.isMobile = true;

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { fade2 } from 'src/app/animations';
-import AOS from 'aos';
 import { Globals } from 'src/app/globals';
 
 @Component({
@@ -16,7 +15,6 @@ export class AboutTechnologyCarouselComponent implements OnInit {
   constructor(public globals: Globals) { }
 
   ngOnInit() {
-    AOS.init();
   }
 
 }

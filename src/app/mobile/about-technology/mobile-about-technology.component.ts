@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import AOS from 'aos';
 import { Globals } from 'src/app/globals';
 
 @Component({
@@ -12,7 +11,6 @@ export class MobileAboutTechnologyComponent implements OnInit {
   constructor(public globals: Globals) { }
 
   ngOnInit() {
-    AOS.init();
   }
 
 }
